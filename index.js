@@ -1,7 +1,9 @@
-var app = require('express')();
+var express = require('express');
+var app = express();
 var http = require('http').Server(app);
 var io = require('socket.io')(http);
 
+app.use(express.static('./'));
 app.get('/',function(req,res,next){
 	res.sendFile(__dirname+'/index.html');
 });
@@ -10,6 +12,12 @@ app.get('/',function(req,res,next){
 io.on('connection', function(socket){
   socket.on('chat message', function(msg){
     io.emit('chat message', msg);
+  });
+  
+  socket.on('user image', function(msg){
+    
+    io.emit('user image', msg);
+    console.log("got image"+msg);
   });
 });
 

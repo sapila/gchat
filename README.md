@@ -1,2 +1,0 @@
-# gchat
-NodeJs chat server
