@@ -1,0 +1,113 @@
+ * { margin: 0; padding: 0; box-sizing: border-box; }
+      body { font: 13px Helvetica, Arial; }
+      form { background: rgba(0,0,0,0.11); padding: 3px; position: fixed; bottom: 0; width: 100%; }
+      form input { border: 0; padding: 10px; width: 90%; margin-right: .5%; }
+      form button { width: 9%; background: rgb(130, 224, 255); border: none; padding: 10px; }
+      #messages { list-style-type: none; margin: 10px; padding: 10px; }
+      #messages li { padding: 5px 10px; }
+	#chatBody{margin:10px;margin-bottom:50px;}
+	.bubble
+{
+position: relative;
+width: auto;
+height: auto;
+padding: 5px;
+background: #FFFFFF;
+-webkit-border-radius: 8px;
+-moz-border-radius: 8px;
+border-radius: 8px;
+border: #34FF29 solid 4px;
+word-wrap: break-word;
+margin-top:3px;
+}
+
+.bubble:after
+{
+content: '';
+position: absolute;
+border-style: solid;
+border-width: 5px 5px 5px 0;
+border-color: transparent #FFFFFF;
+display: block;
+width: 0;
+z-index: 1;
+left: -5px;
+top: 8px;
+}
+
+.bubble:before
+{
+content: '';
+position: absolute;
+border-style: solid;
+border-width: 8px 8px 8px 0;
+border-color: transparent #34FF29;
+display: block;
+width: 0;
+z-index: 0;
+left: -12px;
+top: 5px;
+}
+
+.bubbleOthers
+{
+position: relative;
+width: auto;
+height: auto;
+padding: 5px;
+background: #FFFFFF;
+-webkit-border-radius: 8px;
+-moz-border-radius: 8px;
+border-radius: 8px;
+border: rgb(130, 224, 255) solid 4px;
+word-wrap: break-word;
+margin-top:3px;
+}
+
+.bubbleOthers:after
+{
+content: '';
+position: absolute;
+border-style: solid;
+border-width: 5px 0 5px 5px;
+border-color: transparent #FFFFFF;
+display: block;
+width: 0;
+z-index: 1;
+right: -5px;
+top: 8px;
+}
+
+.bubbleOthers:before
+{
+content: '';
+position: absolute;
+border-style: solid;
+border-width: 8px 0 8px 8px;
+border-color: transparent rgb(130, 224, 255);
+display: block;
+width: 0;
+z-index: 0;
+right: -12px;
+top: 5px;
+}
+#imageSelector {
+    position: relative;
+    overflow: hidden;
+    margin: 10px;
+    float:left;
+}
+#imageSelector input#imageFile {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    cursor: pointer;
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+#selectedImageConainer{
+    float:left;
+}
